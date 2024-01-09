@@ -21,8 +21,8 @@ export default function PlayerContent({ song, songUrl }: PlayerContentProps) {
   const [volume, setVolume] = useState(1);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const VolumeIcon = volume === 0 ? HiSpeakerXMark : HiSpeakerWave;
   const Icon = isPlaying ? BsPauseFill : BsPlayFill;
+  const VolumeIcon = volume === 0 ? HiSpeakerXMark : HiSpeakerWave;
 
   const onPlayNext = () => {
     if (player.ids.length === 0) {
@@ -37,9 +37,9 @@ export default function PlayerContent({ song, songUrl }: PlayerContentProps) {
     }
 
     player.setId(nextSong);
-  };
+  }
 
-  const onPlayprevious = () => {
+  const onPlayPrevious = () => {
     if (player.ids.length === 0) {
       return;
     }
@@ -52,25 +52,28 @@ export default function PlayerContent({ song, songUrl }: PlayerContentProps) {
     }
 
     player.setId(previousSong);
-  };
+  }
 
-  const [play, { pause, sound }] = useSound(songUrl, {
-    volume: volume,
-    onplay: () => setIsPlaying(true),
-    onend: () => {
-      setIsPlaying(false);
-      onPlayNext();
-    },
-    onpause: () => setIsPlaying(false),
-    format: ["mp3"],
-  });
+  const [play, { pause, sound }] = useSound(
+    songUrl,
+    { 
+      volume: volume,
+      onplay: () => setIsPlaying(true),
+      onend: () => {
+        setIsPlaying(false);
+        onPlayNext();
+      },
+      onpause: () => setIsPlaying(false),
+      format: ['mp3']
+    }
+  ) as any
 
   useEffect(() => {
     sound?.play();
-
+    
     return () => {
       sound?.unload();
-    };
+    }
   }, [sound]);
 
   const handlePlay = () => {
@@ -79,7 +82,7 @@ export default function PlayerContent({ song, songUrl }: PlayerContentProps) {
     } else {
       pause();
     }
-  };
+  }
 
   const toggleMute = () => {
     if (volume === 0) {
@@ -87,7 +90,7 @@ export default function PlayerContent({ song, songUrl }: PlayerContentProps) {
     } else {
       setVolume(0);
     }
-  };
+  }
 
   return (
     <div className="grid grid-cols md:grid-cols-3 h-full">
@@ -107,7 +110,7 @@ export default function PlayerContent({ song, songUrl }: PlayerContentProps) {
       </div>
       <div className="hidden h-full md:flex justify-center items-center w-full max-w-[722px] gap-x-6">
         <AiFillStepBackward
-          onClick={onPlayprevious}
+          onClick={onPlayPrevious}
           size={30}
           className="text-neutral-400 cursor-pointer hover:text-white transition"
         />
