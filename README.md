@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GHOST MUSIC
 
-## Getting Started
+Clon de spotify
 
-First, run the development server:
+![Ejemplo de Interfaz de Usuario](/public/readme/spotofy-clone.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Descripción
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+El proyecto ghost music es una plataforma de musica desarrollada con el objetivo de ofrecer una experiencia completa para los usuarios que deseen escuchar sus canciones. Con una combinación de tecnologías como supabase, Next.js y Vercel, nuestra plataforma proporciona una solución robusta y escalable para la gestión de usuarios, interacción en tiempo real subiendo tus audios, y la capacidad de gestionar y escuchar tu musica 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Características Principales
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Gestión de Usuaris:** Permite a los usuarios registrarse, iniciar sesión y gestionar su cuenta.
+- **Subida de audio:** Facilita la forma de subir audio a tu sitio y mantener un registro de favoritos
+- **Pagos con stripe:** Ofrece la capacidad de comprar un paquete con el servicio de pago stripe
 
-## Learn More
+## Tecnologías Utilizadas
 
-To learn more about Next.js, take a look at the following resources:
+- [stripe](enlace): Plataforma de pagos en linea
+- [Next.js](enlace): Framework de react para el desarrollo web
+- [supabase](enlace): Base de datos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Vercel](enlace): Compañia de tecnología
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Instalación
 
-## Deploy on Vercel
+1. Clona este repositorio: `git clone https://github.com/tu-usuario/nombre-del-repo.git`
+2. Instala las dependencias: `npm install`
+3. Configura las variables de entorno (si es necesario).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contribución
+
+Si deseas contribuir a este proyecto, sigue los siguientes pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama: `git checkout -b feature/nueva-caracteristica`.
+3. Haz tus cambios y commitea: `git commit -am 'Agrega una nueva característica'`.
+4. Sube tus cambios: `git push origin feature/nueva-caracteristica`.
+5. Abre un Pull Request.
+
+## Licencia
+
+Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
+
+## Contacto
+
+Si tienes alguna pregunta o comentario, puedes contactarme a través de [correo electrónico](mailto:daniel21develop@gmail.com) o [Twitter](https://twitter.com/ghostDRM21).
